@@ -5,8 +5,6 @@ const fetchCountries = name => {
                 return Promise.reject(new Error());
             }
             return response.json();
-        }
-    )
+        })
 };
-
 export { fetchCountries };
