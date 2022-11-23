@@ -5,3 +5,9 @@ import { fetchCountries } from './fetchCountries';
 
 
 const DEBOUNCE_DELAY = 300;
+
+const input = document.getElementById('search-box');
+const list = document.getElementById('country-list');
+const info = document.getAnimations('country-info');
+
+input.addEventListener('input', debounce(handleInput, DEBOUNCE_DELAY));
