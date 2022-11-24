@@ -23,4 +23,20 @@ function handleInput(e) {
         cleanMarkup(list)
         cleanMarkup(info)
     };
+
+
+    fetchCountries(inputValue)
+        .then(data => {
+            console.log(data)
+            if (data.length > 10) {
+                Notify.info('Too many matches found. Please enter a more specific name.');
+                return;
+            }
+            renderMarkup(data);
+        })
+        .catch(err => {
+            cleanMarkup(list);
+            cleanMarkup(info);
+            Notify.failure('Oops, there is no country with that name');
+        });
 }
