@@ -14,7 +14,7 @@ const info = document.getAnimations('country-info');
 input.addEventListener('input', debounce(handleInput, DEBOUNCE_DELAY));
 
 function cleanMarkup(ref) {
-    ref.innerHTML = "";
+    ref.innerHTML = '';
 }
 
 function handleInput(e) {
