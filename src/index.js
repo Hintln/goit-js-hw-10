@@ -14,7 +14,7 @@ const info = document.getAnimations('country-info');
 input.addEventListener('input', debounce(handleInput, DEBOUNCE_DELAY));
 
 function cleanMarkup(ref) {
-    ref.innerHTML = '';
+    ref.innerHTML = "";
 }
 
 function handleInput(e) {
@@ -39,4 +39,23 @@ function handleInput(e) {
             cleanMarkup(info);
             Notify.failure('Oops, there is no country with that name');
         });
+}
+
+function createListMarkup(data) {
+    return data
+        .map(
+            ({ name, flags }) =>
+                `<li><img src="${flags.svg}>" alt="${name.official}" width="60" height="40">${name.official}</li>`,
+        )
+        .join('');
+}
+
+function createInfoMarkup(data) {
+    return data.map(
+        ({ name, capital, population, flags, languages }) =>
+            `<h1><img src="${flags.svg} alt="${name.official}" width="60", height="40">${name.official}</h1>
+            <p>Capital: ${capital}</p>
+            <p>Population: ${population}</p>
+            <p>Languages: ${languages}</p>`,
+    );
 }
