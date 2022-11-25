@@ -11,7 +11,7 @@ const input = document.getElementById('search-box');
 const list = document.querySelector('.country-list');
 const info = document.querySelector('.country-info');
 
-input.addEventListener('input', debounce(handleInput, DEBOUNCE_DELAY));
+input.addEventListener('input',debounce(handleInput, DEBOUNCE_DELAY));
 
 function cleanMarkup(ref) {
     ref.innerHTML = '';
