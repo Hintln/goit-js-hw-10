@@ -28,7 +28,7 @@ function handleInput(e) {
     fetchCountries(inputValue)
         .then(data => {
             console.log(data)
-            if (data.length > 10) {
+            if (data.length  > 10) {
                 Notify.info('Too many matches found. Please enter a more specific name.');
                 return;
             }
