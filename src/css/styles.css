@@ -18,3 +18,31 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+
+.js-list{
+  list-style: none;
+}
+
+.country-list_item{
+  display: flex;
+  align-items: center;
+}
+
+.js-item_img{
+  width: 60px;
+  height: auto;
+}
+
+.js-card{
+  display: inline-flex;
+  background-color: aliceblue;
+  border-radius: 20px;
+
+}
+
+
+.js-card-img{
+  width: 50px;
+  height: auto;
+}
